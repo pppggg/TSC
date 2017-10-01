@@ -19,4 +19,5 @@ public:
     ~Sim();
 
     void wyswietl();
+    void wprowadz();
 };

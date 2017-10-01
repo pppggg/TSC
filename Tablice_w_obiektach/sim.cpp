@@ -1,9 +1,9 @@
 #include <iostream>
+#include <stdlib.h>
 #include "sim.h"
 
 Sim::Sim()
 {
-    cout<<"Tworze domyslnego sima...";
     sex=1;
     name="Henryk";
 
@@ -17,10 +17,25 @@ Sim::Sim()
 
 void Sim::wyswietl()
 {
-    cout<<endl<<"("<<sex<<") "<<name<<endl;
+    system("cls");
+    cout<<endl<<"-----------"<<endl<<"("<<sex<<") "<<name<<endl;
     for(int i=0; i<tab_size; i++)
     {
         cout<<tab_id[i]<<": "<<tab_par[i]<<endl;
+    }
+}
+
+void Sim::wprowadz()
+{
+    cout<<endl<<"-----------"<<endl<<"Hey. Podaj kilka informacji o Twoim Simie: "<<endl;
+    cout<<"Name: "; cin>>name;
+    for(int i=0; i<5; i++)
+    {
+        if(i!=0)
+        {
+            cout<<endl<<tab_id[i]<<" [1-10]: "; cin>>tab_par[i];
+        }
+        else {cout<<endl<<tab_id[i]<<" [0-120]: "; cin>>tab_par[i];}
     }
 }
 
