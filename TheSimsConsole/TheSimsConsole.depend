@@ -28,3 +28,62 @@
 	"menu.h"
 	<iomanip>
 
+1509196404 source:c:\users\n&i&k\programowanie\thesimsconsole1.1\functions.cpp
+	<iostream>
+
+1509196404 source:c:\users\n&i&k\programowanie\thesimsconsole1.1\main.cpp
+	<iostream>
+	"sim.h"
+	"fns.h"
+	"menu.h"
+
+1509196404 c:\users\n&i&k\programowanie\thesimsconsole1.1\sim.h
+	<iostream>
+
+1509196404 c:\users\n&i&k\programowanie\thesimsconsole1.1\fns.h
+	<iostream>
+
+1509196404 c:\users\n&i&k\programowanie\thesimsconsole1.1\menu.h
+	<iostream>
+
+1509196404 source:c:\users\n&i&k\programowanie\thesimsconsole1.1\menu.cpp
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	<iomanip>
+
+1509196404 source:c:\users\n&i&k\programowanie\thesimsconsole\functions.cpp
+	<iostream>
+
+1509202935 source:c:\users\n&i&k\programowanie\thesimsconsole\main.cpp
+	<iostream>
+	"sim.h"
+	"fns.h"
+	"menu.h"
+
+1509206644 c:\users\n&i&k\programowanie\thesimsconsole\sim.h
+	<iostream>
+
+1509196404 c:\users\n&i&k\programowanie\thesimsconsole\fns.h
+	<iostream>
+
+1509196404 c:\users\n&i&k\programowanie\thesimsconsole\menu.h
+	<iostream>
+
+1509204171 source:c:\users\n&i&k\programowanie\thesimsconsole\menu.cpp
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	"sim.h"
+	<iomanip>
+
+1509204528 source:c:\users\n&i&k\programowanie\thesimsconsole\sim.cpp
+	<iostream>
+	"sim.h"
+	<iomanip>
+	<windows.h>
+	"fns.h"
+	"menu.h"
+

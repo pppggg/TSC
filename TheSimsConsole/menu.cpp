@@ -2,9 +2,12 @@
 #include <conio.h>
 #include <windows.h>
 #include "menu.h"
+#include "sim.h"
 #include <iomanip>
 
 using namespace std;
+
+Sim prog;
 
 void menu(int poz)
 {
@@ -17,7 +20,7 @@ void menu(int poz)
     {
         system( "cls" );
         naglowek();
-     cout << fixed << right;
+        cout << fixed << right;
 
         if( wop == 0) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN  | FOREGROUND_RED | FOREGROUND_INTENSITY ); cout << setw(44) << "\xAF CREATE SIM \xAE\n";}
         else {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_RED  ); cout << setw(44) << "  Create SIM  \n";}
@@ -60,9 +63,9 @@ void menu(int poz)
         if( wop < 0 ) wop++;
         if( wop > 2 ) wop--;
 
-        if(wop==0 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
-        if(wop==1 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
-        if(wop==2 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
+        if(wop==0 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); prog.create_sim();}
+        if(wop==1 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); prog.choose_sim();}
+        if(wop==2 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); exit(0);}
 
 
     }

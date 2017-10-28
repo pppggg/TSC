@@ -35,6 +35,10 @@
 		<Unit filename="fns.h" />
 		<Unit filename="functions.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="playground.cpp" />
+		<Unit filename="playground.h" />
 		<Unit filename="sim.cpp" />
 		<Unit filename="sim.h" />
 		<Extensions>
