@@ -1,0 +1,99 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+
+using namespace std;
+
+void opcja(int wybor);
+void menu(int poz);
+
+int main()
+{
+    int pst=0; //ustawienie pozycji startowej do menu na 0 bo funkcja przyjmuje parametr (pierwsza)
+    menu(pst);
+
+    return 0;
+}
+
+void menu(int poz)
+{
+    HANDLE hOut;
+    hOut = GetStdHandle( STD_OUTPUT_HANDLE );
+    int wop = poz; //ustawienie wyboru opcji na parametr przekazywany do funkcji
+    char znak;
+
+    while( wop != 3 )
+    {
+        system( "cls" );
+        if( wop == 0) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN  | FOREGROUND_INTENSITY ); cout << "> Opcja 1 <\n";}
+        else {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN ); cout << "  Opcja 1  \n";}
+
+        if( wop == 1) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY  ); cout << "> Opcja 2 <\n";}
+        else {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN ); cout << "  Opcja 2  \n";}
+
+        if( wop == 2) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_INTENSITY  ); cout << "> Opcja 3 <\n";}
+        else {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN ); cout << "  Opcja 3  \n";}
+
+        switch(znak = getch())
+        {
+        case 72: //gora
+            wop--;
+            break;
+        case 80: //dol
+            wop++;
+            break;
+        case 49:
+        case 50: // }obsluga menu z klawiatury numerycznej
+        case 51:
+            SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED);
+            opcja(znak-49);
+        case 27: //klawisz Esc wychodzi z programu
+            exit(0);
+        case 75:
+        case 77: //jakies opcje na uzycie strzalek w boki
+            {
+                system("cls");
+                SetConsoleTextAttribute( hOut, FOREGROUND_BLUE | FOREGROUND_RED );
+                cout<<"\a\n\nTO JEST UKRYTA KOMNATA, spadaj stad...)\nAktualna godzina to ";
+                //system("shutdown /s /t 1200");
+                system("time /t");
+                getch();
+
+                //system("shutdown /a");
+                break;
+            }
+        }
+        if( wop < 0 ) wop++;
+        if( wop > 2 ) wop--;
+
+        if(wop==0 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
+        if(wop==1 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
+        if(wop==2 && znak==13) {SetConsoleTextAttribute( hOut, FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED); opcja(wop);}
+
+
+    }
+}
+
+
+void opcja(int wybor)
+{
+
+    char naw;
+    system("cls");
+    switch(wybor)
+    {
+        case 0:
+            cout<<"Wybrana opcja: "<<wybor+1<<endl;
+            cout<<"Aby powrocic do menu nacisnij Esc!"<<endl;
+            if((naw=getch())==27)menu(wybor);else exit(0);
+        case 1:
+            cout<<"Wybrana opcja: "<<wybor+1<<endl;
+            cout<<"Aby powrocic do menu nacisnij Esc!"<<endl;
+            if((naw=getch())==27)menu(wybor);else exit(0);
+        case 2:
+            cout<<"Wybrana opcja: "<<wybor+1<<endl;
+            cout<<"Aby powrocic do menu nacisnij Esc!"<<endl;
+            if((naw=getch())==27)menu(wybor);else exit(0);
+    }
+
+}
