@@ -1,12 +1,20 @@
 #include <iostream>
 #include "sim.h"
 #include "fns.h"
+#include "menu.h"
 
 using namespace std;
 
 
 int main()
 {
+    naglowek_animacja();
+    int pst=0; //ustawienie pozycji startowej do menu na 0 bo funkcja przyjmuje parametr (pierwsza)
+    menu(pst);
+
+    return 0;
+
+    /*
     if(sim_rec()==1)
     {
         Simon sn1;
@@ -23,7 +31,6 @@ int main()
         sna1.show_status();
         sna1.choose_sim();
     }
+*/
 
-
-    return 0;
 }

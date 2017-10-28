@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1506862889 source:d:\c++ programy\thesimsconsole\main.cpp
+1509195154 source:d:\c++ programy\thesimsconsole\main.cpp
 	<iostream>
 	"sim.h"
 	"fns.h"
+	"menu.h"
 
 1506861989 d:\c++ programy\thesimsconsole\sim.h
 	<iostream>
@@ -10,10 +11,20 @@
 1506790382 d:\c++ programy\thesimsconsole\fns.h
 	<iostream>
 
-1506863173 source:d:\c++ programy\thesimsconsole\sim.cpp
+1506863231 source:d:\c++ programy\thesimsconsole\sim.cpp
 	<iostream>
 	"sim.h"
 
 1506790234 source:d:\c++ programy\thesimsconsole\functions.cpp
 	<iostream>
+
+1509195199 d:\c++ programy\thesimsconsole\menu.h
+	<iostream>
+
+1509195810 source:d:\c++ programy\thesimsconsole\menu.cpp
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+	<iomanip>
 
